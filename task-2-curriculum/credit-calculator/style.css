@@ -1,0 +1,157 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f5fb;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.container {
+  width: min(900px, 92%);
+  margin: 40px auto;
+}
+
+header {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  color: #635bdb;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  margin: 5px 0;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #e0e4ef;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 14px rgba(31, 41, 55, 0.05);
+}
+
+label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input,
+select {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd1df;
+  border-radius: 8px;
+  font: inherit;
+  background: white;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #635bdb;
+  outline-offset: 2px;
+}
+
+small {
+  display: block;
+  color: #606b7b;
+  margin-top: 4px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #635bdb;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4f46c7;
+}
+
+button.secondary {
+  margin-left: 8px;
+  background: #e8eaf2;
+  color: #273044;
+}
+
+button.secondary:hover {
+  background: #d8dceb;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.result-grid article {
+  background: #f5f6ff;
+  border: 1px solid #e0e2fb;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.result-grid span {
+  display: block;
+  font-size: 0.9rem;
+  color: #606b7b;
+}
+
+.result-grid strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 1.4rem;
+  overflow-wrap: anywhere;
+}
+
+#status {
+  font-weight: bold;
+}
+
+footer {
+  color: #606b7b;
+  font-size: 0.9rem;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 520px) {
+  .container {
+    margin: 20px auto;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  button.secondary {
+    margin-left: 0;
+  }
+}
