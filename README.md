@@ -11,7 +11,7 @@ This repository contains two connected student investigations:
 
 The investigation examines report submission, administrative review, maintenance assignment, workflow failures, permissions, and recovery procedures.
 
-Folder: [`task-1-workflow/`](task-1-workflow/)
+Folder: [`task-1-workflow/`](task-1-workflow)
 
 ## Task 2: Curriculum Audit and Redesign
 
