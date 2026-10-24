@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#215c3a">
+  <title>GreenCampus | Sustainable campus, together</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= ACCESS / ROLE SELECTION ================= -->
+  <section id="accessScreen" class="access-screen">
+    <div class="access-decoration decor-one"></div>
+    <div class="access-decoration decor-two"></div>
+
+    <div class="access-card">
+
+      <div class="brand brand-large">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.8 3.2C12.4 3.4 5.2 5.4 4.1 11.1c-.7 3.5 2.2 5.8 5.3 4.6 4.9-1.8 8.6-7.1 11.4-12.5Z"/>
+            <path d="M3 21c2.2-6.1 6.4-9.8 12.4-12.7"/>
+          </svg>
+        </span>
+        <span>Green<span class="brand-light">Campus</span></span>
+      </div>
+
+      <p class="eyebrow">SUSTAINABILITY MANAGEMENT</p>
+
+      <h1>
+        A greener campus<br>
+        <span>starts with us.</span>
+      </h1>
+
+      <p class="access-copy">
+        Report environmental issues, track improvements, and help make
+        our campus a better place to learn and work.
+      </p>
+
+      <div class="role-label">Sign in to access your workspace</div>
+
+      <div class="role-options">
+
+        <button class="role-card selected" data-role="student" type="button">
+          <span class="role-icon student-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 9.5 12 5l9 4.5-9 4.5-9-4.5Z"/>
+              <path d="M6.5 11.5v4.2c3.5 2.8 7.5 2.8 11 0v-4.2M21 10v6"/>
+            </svg>
+          </span>
+          <span class="role-text">
+            <strong>Student / Faculty</strong>
+            <small>Report and track issues</small>
+          </span>
+          <span class="role-check">✓</span>
+        </button>
+
+        <button class="role-card" data-role="maintenance" type="button">
+          <span class="role-icon maintenance-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 7.5a5 5 0 0 0-6.5 6.5L3 18.5 5.5 21 10 16.5A5 5 0 0 0 16.5 10L21 5.5 18.5 3 14 7.5Z"/>
+            </svg>
+          </span>
+          <span class="role-text">
+            <strong>Maintenance Team</strong>
+            <small>Manage and resolve reports</small>
+          </span>
+          <span class="role-check">✓</span>
+        </button>
+
+       
+
+      </div>
+
+      <button id="enterApp" class="btn btn-primary access-submit" type="button">
+        Enter dashboard <span>→</span>
+      </button>
+
+      <p class="demo-note">
+        <span class="demo-dot"></span>
+        Register with your campus details to continue
+      </p>
+
+    </div>
+
+    <aside class="access-side">
+      <div class="side-quote">
+        <span class="quote-mark">“</span>
+
+        <h2>Small actions.<br>Lasting impact.</h2>
+
+        <p>
+          Every reported leak, sorted waste bin, and saved kilowatt helps
+          build a more sustainable campus.
+        </p>
+
+        <div class="side-stats">
+          <div>
+            <strong>1 campus</strong>
+            <span>One shared mission</span>
+          </div>
+          <div>
+            <strong>Every action</strong>
+            <span>Makes a difference</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="leaf-art" aria-hidden="true">
+        <div class="leaf-shape leaf-a"></div>
+        <div class="leaf-shape leaf-b"></div>
+        <div class="leaf-shape leaf-c"></div>
+        <div class="leaf-stem"></div>
+      </div>
+
+      <span class="side-footer">Designed for people. Inspired by nature.</span>
+    </aside>
+  </section>
+
+  
+<!-- LOGIN SCREEN FOR RETURNING USERS -->
+<section id="loginScreen" class="registration-screen hidden">
+  <div class="registration-wrap">
+    <div class="registration-card">
+      <p class="eyebrow">WELCOME BACK</p>
+      <h1>Log in to GreenCampus</h1>
+      <p class="registration-intro">
+        Sign in to continue managing campus sustainability.
+      </p>
+
+      <form id="loginForm">
+        <div class="registration-field">
+          <label for="loginEmail">Email address</label>
+          <input id="loginEmail" type="email"
+                 placeholder="you@college.edu" required
+                 autocomplete="username">
+        </div>
+
+        <div class="registration-field">
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" type="password"
+                 placeholder="Enter your password" required
+                 autocomplete="current-password">
+        </div>
+
+        <button type="button" id="toggleLoginPassword"
+                class="text-button">Show password</button>
+
+        <button type="button" id="forgotPassword"
+                class="text-button">Forgot password?</button>
+
+        <p id="loginError" class="registration-error"
+           role="alert"></p>
+
+        <button type="submit" class="btn btn-primary">
+          Log in →
+        </button>
+      </form>
+
+      <p class="registration-intro">
+        New to GreenCampus?
+        <button type="button" id="goToRegister"
+                class="text-button">Create an account</button>
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!-- ================= REGISTRATION SCREEN ================= -->
+  <section
+    id="registrationScreen"
+    class="registration-screen hidden"
+    aria-labelledby="registrationTitle"
+  >
+
+    <div class="registration-wrap">
+
+      <div class="registration-brand brand">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.8 3.2C12.4 3.4 5.2 5.4 4.1 11.1c-.7 3.5 2.2 5.8 5.3 4.6 4.9-1.8 8.6-7.1 11.4-12.5Z"/>
+            <path d="M3 21c2.2-6.1 6.4-9.8 12.4-12.7"/>
+          </svg>
+        </span>
+        <span>Green<span class="brand-light">Campus</span></span>
+      </div>
+
+      <div class="registration-card">
+
+        <button id="backToRoles" class="back-link" type="button">
+          ← Back to role selection
+        </button>
+
+        <p class="eyebrow">PROFILE SETUP</p>
+
+        <h1 id="registrationTitle">Let's get you started.</h1>
+
+        <p class="registration-intro">
+          Complete your details to personalize your GreenCampus experience.
+        </p>
+
+        <div class="registration-role-summary">
+          <span class="registration-role-dot"></span>
+          <span>Registering as</span>
+          <strong id="registrationRoleName">Student</strong>
+        </div>
+
+        <form id="registrationForm" novalidate>
+
+          <!-- script.js generates the fields based on the selected role -->
+          <div id="registrationFields" class="registration-fields"></div>
+
+          <div class="privacy-note">
+            <span aria-hidden="true">🔒</span>
+            <p>
+              Your profile is stored in the GreenCampus MySQL database.
+              Passwords are securely hashed by the server and are never
+              stored as plain text.
+            </p>
+          </div>
+
+          <label class="consent-row">
+            <input id="registrationConsent" type="checkbox" required>
+            <span>
+              I agree to the use of my information for GreenCampus features
+              and have read the privacy notice.
+            </span>
+          </label>
+
+          <p
+            id="registrationError"
+            class="registration-error"
+            role="alert"
+            aria-live="polite"
+          ></p>
+
+          <div class="registration-actions">
+            <button
+              id="cancelRegistration"
+              class="btn btn-outline"
+              type="button"
+            >
+              Cancel
+            </button>
+
+            <button class="btn btn-primary" type="submit">
+              Create account <span>→</span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+      <p class="registration-footer">
+        <span class="demo-dot"></span>
+        Secure account registration · GreenCampus API
+      </p>
+
+    </div>
+
+    <aside class="registration-side">
+      <span class="quote-mark">“</span>
+
+      <h2>Small actions.<br>Lasting impact.</h2>
+
+      <p>
+        A greener campus begins when people have the right tools to report,
+        improve, and work together.
+      </p>
+
+      <div class="registration-side-badge">
+        <span>♧</span>
+        <div>
+          <strong>One shared mission</strong>
+          <small>Better habits. Healthier campus.</small>
+        </div>
+      </div>
+
+      <div class="leaf-art" aria-hidden="true">
+        <div class="leaf-shape leaf-a"></div>
+        <div class="leaf-shape leaf-b"></div>
+        <div class="leaf-shape leaf-c"></div>
+        <div class="leaf-stem"></div>
+      </div>
+    </aside>
+
+  </section>
+
+
+  <!-- ================= MAIN APPLICATION ================= -->
+  <div id="appShell" class="app-shell hidden">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="sidebar">
+
+      <a
+        class="brand sidebar-brand"
+        href="#"
+        aria-label="GreenCampus home"
+        data-page="dashboard"
+      >
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.8 3.2C12.4 3.4 5.2 5.4 4.1 11.1c-.7 3.5 2.2 5.8 5.3 4.6 4.9-1.8 8.6-7.1 11.4-12.5Z"/>
+            <path d="M3 21c2.2-6.1 6.4-9.8 12.4-12.7"/>
+          </svg>
+        </span>
+        <span>Green<span class="brand-light">Campus</span></span>
+      </a>
+
+      <div class="workspace-label">WORKSPACE</div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+
+        <button class="nav-item active" data-page="dashboard" type="button">
+          <span class="nav-icon">▦</span>
+          <span>Dashboard</span>
+        </button>
+
+        <button id="reportNavItem" class="nav-item" data-page="report" type="button">
+          <span class="nav-icon">＋</span>
+          <span>Report an issue</span>
+          <span class="nav-pill">New</span>
+        </button>
+
+        <button class="nav-item" data-page="issues" type="button">
+          <span class="nav-icon">☷</span>
+          <span>Issue tracker</span>
+          <span id="sidebarIssueCount" class="nav-count">8</span>
+        </button>
+
+        <button class="nav-item" data-page="analytics" type="button">
+          <span class="nav-icon">▥</span>
+          <span>Analytics</span>
+        </button>
+
+        <button class="nav-item" data-page="initiatives" type="button">
+          <span class="nav-icon">♧</span>
+          <span>Green initiatives</span>
+        </button>
+
+      </nav>
+
+      <div class="sidebar-bottom">
+
+        <div class="sidebar-tip">
+          <div class="tip-icon">✦</div>
+          <strong>Small change, big impact</strong>
+          <p>Switch off unused lights today and help save energy.</p>
+
+          <button data-page="initiatives" type="button">
+            Explore green tips <span>→</span>
+          </button>
+        </div>
+
+        <button class="nav-item" data-page="settings" type="button">
+          <span class="nav-icon">⚙</span>
+          <span>Settings &amp; help</span>
+        </button>
+
+        <div class="sidebar-profile">
+          <div id="profileAvatar" class="avatar">SF</div>
+
+          <div class="profile-info">
+            <strong id="profileName">Student / Faculty</strong>
+            <small id="profileRole">Campus community</small>
+          </div>
+
+          
+        </div>
+
+      </div>
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-area">
+
+      <!-- TOP BAR -->
+      <header class="topbar">
+
+        <button
+          id="mobileMenu"
+          class="icon-button mobile-menu"
+          aria-label="Open navigation"
+          type="button"
+        >
+          ☰
+        </button>
+
+        <div class="breadcrumb">
+          <span>GreenCampus</span>
+          <span class="crumb-slash">/</span>
+          <strong id="pageCrumb">Dashboard</strong>
+        </div>
+
+        <div class="topbar-actions">
+
+          <div class="campus-status">
+            <span></span>
+            Campus demo
+          </div>
+
+          <button
+            id="notificationButton"
+            class="icon-button notification-button"
+            aria-label="Notifications"
+            type="button"
+          >
+            ♧<i id="notificationDot"></i>
+          </button>
+
+          <div class="topbar-user">
+            <div id="topAvatar" class="avatar avatar-small">SF</div>
+
+            <div>
+              <strong id="topUserName">Student / Faculty</strong>
+              <small id="topUserRole">Demo account</small>
+            </div>
+
+            <button
+              id="topUserMenu"
+              class="plain-chevron"
+              aria-label="User menu"
+              type="button"
+            >
+              ⌄
+            </button>
+          </div>
+
+        </div>
+      </header>
+
+
+      <!-- NOTIFICATIONS -->
+      <div id="notificationPanel" class="notification-panel hidden">
+
+        <div class="panel-heading">
+          <strong>Notifications</strong>
+          <button id="markRead" class="text-button" type="button">
+            Mark all read
+          </button>
+        </div>
+
+        <div id="notificationList"></div>
+      </div>
+
+
+      <!-- JAVASCRIPT RENDERS THE SELECTED PAGE HERE -->
+      <div id="pageContent" class="page-content"></div>
+
+
+      <!-- FOOTER -->
+      <footer class="app-footer">
+        <span>© 2026 GreenCampus</span>
+
+        <span>
+          <span class="footer-leaf">♧</span>
+          Better habits. Healthier campus.
+        </span>
+      </footer>
+
+    </main>
+  </div>
+
+
+  <!-- ================= GLOBAL UI ELEMENTS ================= -->
+
+  <div
+    id="toastRegion"
+    class="toast-region"
+    aria-live="polite"
+    aria-atomic="true"
+  ></div>
+
+  <div id="modalRoot"></div>
+
+  <!-- Load the existing application logic -->
+  <script src="script.js"></script>
+
+</body>
+</html>
